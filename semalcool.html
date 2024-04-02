@@ -122,7 +122,7 @@
                 }
         }
     </script>
-      <head>
+     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Realizar Pedido</title>
@@ -139,24 +139,15 @@
     </head>
     <body>
         <h2>Realizar Pedido</h2>
-        <button id="realizarPedido">Realizar Pedido</button>
-        <div id="opcoes" class="hidden">
+        <button class="opcoes-button" onclick="window.location.href='realizarpedido.html'">Realizar Pedido</button>
+        
+       <div id="opcoes" class="hidden">
         </div>
-        <p id="mensagemSucesso" class="hidden">Pedido realizado com sucesso!</p>
     
-        <script>
-            const realizarPedidoBtn = document.getElementById('realizarPedido');
-            const mensagemSucesso = document.getElementById('mensagemSucesso');
-    
-            realizarPedidoBtn.addEventListener('click', () => {
-                mensagemSucesso.classList.remove('hidden');
-            });
-    
+
             
         </script>
     <button onclick="history.back()">Voltar</button>
-
-
     
     
 </body>

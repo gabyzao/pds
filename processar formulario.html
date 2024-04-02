@@ -8,7 +8,7 @@
         /* Estilos para o formulário */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
+            background-color: #dbdada;
         }
         .container {
             max-width: 600px;
@@ -41,9 +41,25 @@
             background-color: #6baff8;
         }
     </style>
+<div style="text-align: center; margin-top: 20px;">
+    <p>Seu pedido foi enviado.</p>
+    <p><a href="index.html">Voltar à página principal</a></p>
+<div id="tempo-estimado"></div>
+
+<script>
+    document.getElementById("pedido-form").addEventListener("submit", function(event) {
+        event.preventDefault();
+        const nome = document.getElementById("nome").value;
+        const mesa = document.getElementById("mesa").value;
+
+        // Simulação de processamento (tempo estimado em minutos)
+        const tempoEstimado = Math.floor(Math.random() * 30) + 10;
+
+        document.getElementById("tempo-estimado").textContent = `Tempo estimado para a bebida chegar à mesa ${mesa}: ${tempoEstimado} minutos.`;
+    });
     <div style="text-align: center; margin-top: 20px;">
-        <p>Obrigado por entrar em contato conosco! Sua mensagem foi recebida.</p>
-        <p><a href="index.html">Voltar à página principal</a></p>
-    </div>
+    <p><a href="index.html">Voltar à página principal</a></p>
+</div>
+</script>
 </body>
 </html>

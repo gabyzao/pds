@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt - br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drinks sem alcool</title>
+    <style>
+        
+        button {
+            background-color: #332435; 
+            color: #ffffff;
+            font-size: 18px; 
+            padding: 10px 20px;
+            border: none; 
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+    
+        
+        button:hover {
+            background-color: #5e565f; /
+        }
+    
+    
+        img {
+            width: 40%; 
+        }
+    
+        body {
+            background-color: #dbdada; 
+            
+        }
+    
+        
+            
+        
+    
+    
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+        }
+    
+        li {
+            margin: 10px;
+        }
+    </style>
+<body>
+    <h1> Quentes</h1>
+    <p>Se delicie com nosso cardapio de quentes!</p>
+
+ 
+    <label for="faça seu pedido">Faça seu pedido:</label>
+    <select id="faça seu pedido" onchange="selecionarOpcao()">
+        <option value="selecione">selecione</option>
+        <option value="rish coffee">Rish Coffee</option>
+        <option value="leite quente com conhaque">Leite quente com conhaque</option>
+        <option value="quentão">Quentão</option>
+        <option value="vinho quente">Vinho quente</option>
+        <option value="chocolamour ">Chocolamour </option>
+    </select>
+
+    <div id="conteudo"></div>
+
+    <script>
+        function selecionarOpcao() {
+            const filtro = document.getElementById("faça seu pedido").value;
+            const conteudo = document.getElementById("conteudo");
+
+            if (filtro === "rish coffee") {
+                conteudo.innerHTML = `
+                    <h2>Rish Coffee</h2>
+                    <img src="https://keepersheartwhiskey.com/wp-content/uploads/Irish-Coffee.jpg"" alt="Image" height="430" width="730">
+                    <h2>ingredientes</h2>
+                    <p>café, uísque irlandes, açucar a gosto</p>
+                    
+                    
+
+                `;
+            
+            } else if (filtro === "quentão") {
+                conteudo.innerHTML = `
+                    <h2>Quentão</h2>
+                    <img src="https://www.sabornamesa.com.br/media/k2/items/cache/242a68bb1034576b0ba92e3912e97f74_XL.jpg  " alt="Image" height="430" width="730">
+                    <h2>ingredientes</h2>
+                    <p>cachaça, colher de chá de cravo-da-índia, gengibre, canela, cardamomo</p>
+                   
+
+                   
+                `;
+            } else if (filtro === "vinho quente") {
+                conteudo.innerHTML = `
+                    <h2>Vinho quente</h2>
+                    <img src="https://www.confeiteiradesucesso.com/wp-content/uploads/2020/05/vinho-quente-1024x1024.jpg"" alt="Image" height="430" width="730">
+                    <h2>ingredientes</h2>
+                    <p>canela em pau a gosto, cravo-da-índia, laranja ralada, vinho tinto seco, maça</p>
+
+                  
+                `;
+            } else if (filtro === "chocolamour ") {
+                conteudo.innerHTML = `
+                    <h2>Chocolamour </h2>
+                    <img src="https://www.guiadasemana.com.br/contentFiles/image/2017/06/FEA/galeria/35220_w840h525_1496353585chocolate-quente1.jpg" alt="Image" height="430" width="730">
+                    <h2>ingredientes</h2>
+                    <p>chantilly, chocolate quente, conhaque, bailey's, cereja</p>
+                    
+                    
+                    
+                    `;
+            } else  { 
+                conteudo.innerHTML = `
+                    <h2>Leite quente com conhaque</h2>
+                    <img src="https://www.folhadealphaville.com.br/images/articles/4922/b2ap3_medium_chocolate-quente.jpg" alt="Image" height="430" width="730">
+                    <h2>ingredientes</h2>
+                    <p>leite quente, chocolate, conhaque, canela, chantilly </p>
+                    
+                    
+                    `; 
+                    
+                }
+        }
+    </script>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Realizar Pedido</title>
+        <style>
+            /* Estilos opcionais para melhorar a aparência */
+            body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+            }
+            .hidden {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Realizar Pedido</h2>
+        <button class="opcoes-button" onclick="window.location.href='realizarpedido.html'">Realizar Pedido</button>
+        
+       <div id="opcoes" class="hidden">
+        </div>
+    
+
+            
+        </script>
+    <button onclick="history.back()">Voltar</button>
+
+
+     
+
+         
+    
+</body>
+</html>

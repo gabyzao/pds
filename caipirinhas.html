@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt - br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caipirinhas</title>
+    
+
+</head>
+<style>
+        
+    button {
+        background-color: #332435; 
+        color: #ffffff;
+        font-size: 18px; 
+        padding: 10px 20px;
+        border: none; 
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    
+    button:hover {
+        background-color: #9f92a1; 
+    }
+
+
+    img {
+        width: 40%; 
+    }
+
+    body {
+        background-color: #dbdada; 
+        
+    }
+
+    
+        
+    
+
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+    }
+
+    li {
+        margin: 10px;
+    }
+</style>
+<body>
+    <h1> Caipirinhas</h1>
+    <p>Se delicie com nossas caipiroskas!</p>
+
+ 
+    <label for="faça seu pedido" >Faça seu pedido:</label>
+    <select id="faça seu pedido" onchange="selecionarOpcao()">
+        <option value="selecione">selecione</option>
+        <option value="caipirinha de abacaxi com hortelã"> Caipirinha de abacaxi com hortelã</option>
+        <option value="morango">Morango</option>
+        <option value="limão">Limão</option>
+        <option value="maracujá">Maracujá</option>
+        <option value="caipirinha de lima-da-pérsia ">Caipirinha de lima-da-pérsia </option>
+    </select>
+
+    <div id="conteudo"></div>
+
+    <script>
+        function selecionarOpcao() {
+            const filtro = document.getElementById("faça seu pedido").value;
+            const conteudo = document.getElementById("conteudo");
+            
+
+            if (filtro === "limão") {
+                conteudo.innerHTML = `
+                    <h2>Limão</h2>
+                    <img src="https://static.itdg.com.br/images/1200-675/82a28aad77a013831d5c0ca43544eedc/319875-original.jpg" alt="Limão" >
+                    <h2>ingredientes</h2>
+                    <p>vodka, açúcar, limão, gelo a gosto</p>
+                    
+                    
+
+                `;
+            
+            } else if (filtro === "morango") {
+                conteudo.innerHTML = `
+                    <h2>Morango</h2>
+                    <img src=" https://www.receiteria.com.br/wp-content/uploads/caipirinha-de-morango-730x450.png" alt="Morango">
+                    <h2>ingredientes</h2>
+                    <p>cachaça, morango, gelo a gosto, açucar</p>
+                    
+                   
+
+                   
+                `;
+            } else if (filtro === "maracujá") {
+                conteudo.innerHTML = `
+                    <h2>Maracujá</h2>
+                    <img src="https://www.receiteria.com.br/wp-content/uploads/caipirinha-de-maracuja-730x450.png" alt="Maracujá">
+                    <h2>ingredientes</h2>
+                    <p>vodka, açúcar, maracujá, gelo a gosto</p>
+
+                  
+                `;
+            } else if (filtro === "caipirinha de lima-da-pérsia ") {
+                conteudo.innerHTML = `
+                    <h2>Caipirinha de lima-da-pérsia </h2>
+                    <img src="https://www.receiteria.com.br/wp-content/uploads/caipirinha-de-lima-da-persia-01-730x480.jpg" alt="Caipirinha de lima-da-pérsia">
+                    <h2>ingredientes</h2>
+                    <p> lima-da-pérsia, açúcar, cachaça de amendoim, gelo a gosto</p>
+                    
+                    
+                    
+                    `;
+            } else  { 
+                conteudo.innerHTML = `
+                    <h2>Caipirinha de abacaxi com hortelã</h2>
+                    <img src=https://www.receiteria.com.br/wp-content/uploads/caipirinha-de-abacaxi-com-hortela-730x480.jpeg" alt="caipirinha de abacaxi com hortelã">
+                    <h2>ingredientes</h2>
+                    <p>abacaxi, Folhas de hortelã a gosto, vodka, gelo a gosto</p>
+                    
+                    `; 
+                }
+
+        }
+        
+    </script>
+    
+    
+            
+    
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Realizar Pedido</title>
+            <style>
+               
+                body {
+                    font-family: Arial, sans-serif;
+                    text-align: center;
+                    
+                }
+                .hidden {
+                    display: none;
+                }
+                
+            </style>
+        </head>
+        <body>
+            <h2>Realizar Pedido</h2>
+            <button class="opcoes-button" onclick="window.location.href='realizarpedido.html' " >Realizar Pedido</button>
+            
+           <div id="opcoes" class="hidden">
+            </div>
+        
+    
+                
+            </script>
+        <button onclick="history.back()">Voltar</button>
+    
+
+
+     
+
+         
+         
+    
+</body>
+</html>
